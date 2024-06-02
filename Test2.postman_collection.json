@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "b35b314e-b589-4aa5-8d0a-20306229fce3",
+		"name": "Test2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35371827"
+	},
+	"item": [
+		{
+			"name": "Test global variable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_global}}api/users/2",
+					"host": [
+						"{{base_global}}api"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test environment variable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_environment}}api/users/2",
+					"host": [
+						"{{base_environment}}api"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
