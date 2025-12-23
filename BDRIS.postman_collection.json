@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "2ab6fa1b-14a2-435f-9475-3b019d43522e",
+		"name": "BDRIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45060523"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://bdris-dashboard-qa.mpower-social.com",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://bdris-dashboard-qa.mpower-social.com",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "Test@123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"superadmin\",\r\n  \"mobile\": \"mehedi@mpower-social.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bdris-dashboard-qa-api.mpower-social.com/rest/api/login/otp",
+					"protocol": "https",
+					"host": [
+						"bdris-dashboard-qa-api",
+						"mpower-social",
+						"com"
+					],
+					"path": [
+						"rest",
+						"api",
+						"login",
+						"otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login(OTP)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"host": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://bdris-dashboard-qa.mpower-social.com",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://bdris-dashboard-qa.mpower-social.com",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "3BE5DDB1218D5DEFE19142F7DDEB091B",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"superadmin\",\r\n  \"mobile\": \"mehedi@mpower-social.com\",\r\n  \"password\": \"Test@123\",\r\n  \"otp\": \"1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bdris-dashboard-qa-api.mpower-social.com/rest/api/login/validate",
+					"protocol": "https",
+					"host": [
+						"bdris-dashboard-qa-api",
+						"mpower-social",
+						"com"
+					],
+					"path": [
+						"rest",
+						"api",
+						"login",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
